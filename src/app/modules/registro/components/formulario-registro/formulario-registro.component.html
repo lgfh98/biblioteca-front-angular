@@ -1,0 +1,24 @@
+<div class="container" style="height: 100vh;">
+    <div class="row align-items-center justify-content-center" style="height: 100%;">
+        <div class="col">
+            <form [formGroup]='formulario' (ngSubmit)="onSubmit(formulario.value)" style="margin-bottom: 20px;">
+                <div class="form-group">
+                    <label>Cédula</label>
+                    <input required id="name" formControlName="cedula" type="number" class="form-control"
+                        aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary">Reservar</button>
+            </form>
+            <div *ngIf="success">
+                <div class="alert alert-success" role="alert">
+                    Reserva exitosa! 😊
+                </div>
+            </div>
+
+            <!-- <div class="alert alert-danger" role="alert">
+                No se pudo reservar 😥
+            </div> -->
+        </div>
+    </div>
+
+</div>

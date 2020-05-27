@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "biblioteca-sumset"
+    }
+  },
+  "defaultProject": "biblioteca-sumset",
+  "cli": {
+    "analytics": false
+  }
 }

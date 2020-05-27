@@ -1,0 +1,18 @@
+<div class="card" style="background-color: #00000024;">
+    <img [src]="libro.portada" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{libro.titulo}} <span class="badge badge-info" style="margin-right: 5px;">+
+                {{libro.edad_requerida}}</span>
+            <div *ngIf="!libro.estado">
+                <span class="badge badge-success">disponible</span>
+            </div>
+            <div *ngIf="libro.estado">
+                <span class="badge badge-danger">reservado</span>
+            </div>
+        </h5>
+        <p class="card-text">{{libro.descripcion}}</p>
+        <div *ngIf="!libro.estado">
+            <a [routerLink]="['/register',libro.id]" class="btn btn-primary">Reservar</a>
+        </div>
+    </div>
+</div>
